@@ -1,0 +1,42 @@
+// Variables
+$primary-color: #1b1b1b;
+$header-bg: #333;
+$font-family: 'Lexend', Arial, Helvetica, sans-serif;
+
+// Estilos Globales
+body {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 300;
+  color: $primary-color;
+  font-family: $font-family;
+  margin: 0;
+}
+
+img {
+  width: 80px;
+}
+
+// Mixins o Clases Generales Reutilizables
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.text-normal {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
