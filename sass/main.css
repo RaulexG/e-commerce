@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   width: 100%;
   font-size: 15px;
@@ -11,14 +12,34 @@ img {
   width: 80px;
 }
 
+.flex-center, .cart__item, .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-width, .products__item-image, .header__menu-icon img, .header__cart-icon img {
+  width: 100%;
+}
+
+.text-normal, .products__item-price {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.text-bold, .cart__item-name, .cart__item-price, .cart__title, .products__item-title, .banner__title {
+  font-weight: 600;
+}
+
+.text-center, .cart__title {
+  text-align: center;
+}
+
 /* Header */
 .header {
   width: 100%;
   padding: 20px 40px;
   background-color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
 }
@@ -30,10 +51,6 @@ img {
 
 .header__logo {
   width: 100px;
-}
-
-.header__menu-icon img, .header__cart-icon img {
-  width: 100%;
 }
 
 /* Banner */
@@ -49,7 +66,6 @@ img {
 }
 
 .banner__title {
-  font-weight: 600;
   font-size: 30px;
   margin: 10px;
 }
@@ -102,7 +118,6 @@ img {
 }
 
 .products__item-image {
-  width: 100%;
   max-width: 200px;
   height: 200px;
   -o-object-fit: cover;
@@ -111,14 +126,8 @@ img {
 }
 
 .products__item-title {
-  font-weight: 500;
   font-size: 17px;
   margin-bottom: 5px;
-}
-
-.products__item-price {
-  font-weight: 300;
-  font-size: 15px;
 }
 
 /* Cart */
@@ -134,18 +143,34 @@ img {
   box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.3);
 }
 
+.cart__items {
+  max-height: 500px;
+  overflow-y: auto;
+  /* Estilo del thumb (la parte que se mueve) */
+  /* Estilo del thumb cuando se pasa el mouse sobre él */
+  /* Estilo del track (la parte de fondo de la barra de scroll) */
+}
+.cart__items::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de scroll */
+}
+.cart__items::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Color del thumb */
+}
+.cart__items::-webkit-scrollbar-thumb:hover {
+  background-color: #999; /* Color del thumb al hacer hover */
+}
+.cart__items::-webkit-scrollbar-track {
+  background-color: #f5f5f5; /* Color del fondo */
+}
+
 .cart__title {
-  text-align: center;
   font-size: 20px;
-  font-weight: 600;
   padding: 25px 0;
 }
 
 .cart__item {
   border-bottom: 1px solid #333;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 15px;
   box-sizing: border-box;
 }
@@ -156,8 +181,4 @@ img {
 
 .cart__item-remove img {
   width: 20px;
-}
-
-.cart__item-name, .cart__item-price {
-  font-weight: 500;
 }/*# sourceMappingURL=main.css.map */

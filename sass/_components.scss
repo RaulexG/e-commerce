@@ -45,6 +45,16 @@
   box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.30);
 }
 
+.cart__items {
+  max-height: 500px; // Ajusta la altura
+  overflow-y: auto;
+
+  // Aplica el mixin de scroll personalizado
+  @include scrollbar-estilo(8px, #f5f5f5, #ccc, #999);
+}
+
+
+
 .cart__title {
   @extend .text-bold;
   @extend .text-center;
