@@ -43,7 +43,19 @@
   right: 0;
   top: 100px;
   box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.30);
+  transform: translateX(100%); // Mueve el carrito fuera de la vista
+  transition: transform 0.3s ease, opacity 0.3s ease; // Transición suave para el deslizamiento y la opacidad
+  visibility: hidden;
+  opacity: 0;
+
+  &.visible {
+    transform: translateX(0); // Mueve el carrito a la vista
+    visibility: visible;
+    opacity: 1;
+  }
 }
+
+
 
 .cart__items {
   max-height: 500px; // Ajusta la altura
@@ -59,7 +71,7 @@
   @extend .text-bold;
   @extend .text-center;
   font-size: 20px;
-  padding: 25px 0;
+  padding: 5px 0;
 }
 
 .cart__item {

@@ -14,7 +14,8 @@
     <header class="header">
         <i class="header__menu-icon"><img src="img/menu.svg" alt="Icono menú"></i>
         <img class="header__logo" width="200" src="img/Logo.png" alt="Logo adidas">
-        <i class="header__cart-icon"><img width="50" src="img/Carrito.svg" alt="Icono carrito"></i>        
+        <i class="header__cart-icon" id="cart-icon"><img width="50" src="img/Carrito.svg" alt="Icono carrito"></i>
+    
     </header>
 
     <main>
@@ -81,7 +82,7 @@
 
         </section>
 
-        <section class="cart">
+        <section class="cart" id="cart">
             <h2 class="cart__title">CARRITO</h2>
             <div class="cart__items">
                 <div class="cart__item">
@@ -179,5 +180,17 @@
         
     </main>
     
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var cartIcon = document.getElementById('cart-icon');
+            var cart = document.getElementById('cart');
+    
+            cartIcon.addEventListener('click', function() {
+                cart.classList.toggle('visible'); // Agrega o quita la clase .visible
+            });
+        });
+    </script>
+    
+      
 </body>
 </html>
