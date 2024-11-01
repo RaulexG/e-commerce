@@ -1,0 +1,98 @@
+
+
+/* Products */
+.products {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.products__item {
+  cursor: pointer;
+  text-align: center;
+}
+
+.products__item-image {
+  @extend .full-width;
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.products__item-title {
+  @extend .text-bold;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.products__item-price {
+  @extend .text-normal;
+}
+
+/* Cart */
+.cart {
+  width: $cartw;
+  background-color: white;
+  padding: 25px;
+  box-sizing: border-box;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.30);
+  transform: translateX(100%); // Mueve el carrito fuera de la vista
+  transition: transform 0.3s ease, opacity 0.3s ease; // Transición suave para el deslizamiento y la opacidad
+  visibility: hidden;
+  opacity: 0;
+
+  &.visible {
+    transform: translateX(0); // Mueve el carrito a la vista
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+
+.cart__items {
+  max-height: $carth; // Ajusta la altura
+  overflow-y: auto;
+
+  // Aplica el mixin de scroll personalizado
+  @include scrollbar-estilo(8px, #f5f5f5, #ccc, #999);
+}
+
+
+
+.cart__title {
+  @extend .text-bold;
+  @extend .text-center;
+  font-size: 20px;
+  padding: 5px 0;
+}
+
+.cart__item {
+  border-bottom: 1px solid #333;
+  @extend .flex-center;
+  justify-content: space-between;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.cart__item-image {
+  width: 60px;
+}
+
+.cart__item-remove img {
+  width: 20px;
+}
+
+.cart__item-name, .cart__item-price {
+  @extend .text-bold;
+  font-size: $txt;
+}

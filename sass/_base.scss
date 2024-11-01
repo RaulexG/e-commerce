@@ -1,0 +1,72 @@
+// Variables
+$primary-color: #1b1b1b;
+$header-bg: #333;
+$font-family: 'Lexend', Arial, Helvetica, sans-serif;
+
+$gray2: #242424;
+$gray: #493d3d28;
+
+$cartw: clamp(100px, 60vw, 500px); // Ancho preferido es 50% del ancho del viewport
+$carth: clamp(200px, 70vh, 800px); // Altura preferida es 50% de la altura del viewport
+$txt: clamp(10px, 1.5vw, 15px);
+
+// Estilos Globales
+body {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 300;
+  color: $primary-color;
+  font-family: $font-family;
+  margin: 0;
+}
+
+img {
+  width: 80px;
+}
+
+// Mixins o Clases Generales Reutilizables
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.text-normal {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+@mixin scrollbar-estilo($width, $bg-color, $thumb-color, $thumb-hover-color) {
+    
+  &::-webkit-scrollbar {
+    width: $width; /* Ancho de la barra de scroll */
+  }
+
+  /* Estilo del thumb (la parte que se mueve) */
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color; /* Color del thumb */     
+  }
+
+  /* Estilo del thumb cuando se pasa el mouse sobre él */
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $thumb-hover-color; /* Color del thumb al hacer hover */
+  }
+
+  /* Estilo del track (la parte de fondo de la barra de scroll) */
+  &::-webkit-scrollbar-track {
+    background-color: $bg-color; /* Color del fondo */
+  }
+}
