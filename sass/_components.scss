@@ -1,3 +1,5 @@
+
+
 /* Products */
 .products {
   width: 80%;
@@ -34,7 +36,7 @@
 
 /* Cart */
 .cart {
-  width: 500px;
+  width: $cartw;
   background-color: white;
   padding: 25px;
   box-sizing: border-box;
@@ -58,7 +60,7 @@
 
 
 .cart__items {
-  max-height: 500px; // Ajusta la altura
+  max-height: $carth; // Ajusta la altura
   overflow-y: auto;
 
   // Aplica el mixin de scroll personalizado
@@ -92,4 +94,5 @@
 
 .cart__item-name, .cart__item-price {
   @extend .text-bold;
+  font-size: $txt;
 }

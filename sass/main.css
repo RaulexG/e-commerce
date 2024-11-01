@@ -167,7 +167,7 @@ img {
 
 /* Cart */
 .cart {
-  width: 500px;
+  width: clamp(100px, 60vw, 500px);
   background-color: white;
   padding: 25px;
   box-sizing: border-box;
@@ -188,7 +188,7 @@ img {
 }
 
 .cart__items {
-  max-height: 500px;
+  max-height: clamp(200px, 70vh, 800px);
   overflow-y: auto;
   /* Estilo del thumb (la parte que se mueve) */
   /* Estilo del thumb cuando se pasa el mouse sobre él */
@@ -225,4 +225,8 @@ img {
 
 .cart__item-remove img {
   width: 20px;
+}
+
+.cart__item-name, .cart__item-price {
+  font-size: clamp(10px, 1.5vw, 15px);
 }/*# sourceMappingURL=main.css.map */

@@ -6,6 +6,10 @@ $font-family: 'Lexend', Arial, Helvetica, sans-serif;
 $gray2: #242424;
 $gray: #493d3d28;
 
+$cartw: clamp(100px, 60vw, 500px); // Ancho preferido es 50% del ancho del viewport
+$carth: clamp(200px, 70vh, 800px); // Altura preferida es 50% de la altura del viewport
+$txt: clamp(10px, 1.5vw, 15px);
+
 // Estilos Globales
 body {
   width: 100%;
